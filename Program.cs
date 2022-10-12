@@ -1,8 +1,23 @@
 ﻿/*Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-Решаем с помощью "/" и "%", со строками не работаем */
+Решаем с помощью "/" и "%", со строками не работаем*/
+    
+        Console.WriteLine("Введите число:");
+        int num1 = int.Parse(Console.ReadLine()!);
+        int num2 = num1 % 100;
+        int num3 = num2 / 10;
+        if ((num1 >= 100) && (num1 <= 999))
+        {
+            Console.WriteLine($"Вторая цифра {num1} = {num3}");
+        }
+        else if (num1 <= 99) 
 
-Console.WriteLine("Введите число:");
-int number1 = int.Parse(Console.ReadLine()!);
-int num2 = number1 % 100;
-int num3 = num2 / 10;
-Console.WriteLine($"Вторая цифра {number1} {num3}");
+            Console.WriteLine("Ошибка необходимо ввести трехзначное число");
+        
+        else if (num1 >= 999) 
+
+            Console.WriteLine("Ошибка необходимо ввести трехзначное число");
+        
+    
+
+
+
